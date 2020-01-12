@@ -14,14 +14,15 @@ class Prop {
 	/**
 	 * Parser function hook
 	 *
-	 * @param Parser $parser Parser object
+	 * @param Parser &$parser Parser object
 	 * @param string $name Name of the property
-	 * @param string $value Value of the property
+	 * @param string|null $value Value of the property
+	 * @return string
 	 */
 	public static function onFunctionHook( Parser &$parser, $name, $value = null ) {
 		$output = $parser->getOutput();
 		if ( $value ) {
-        	$output->setProperty( $name, $value );
+			$output->setProperty( $name, $value );
 		} else {
 			return $output->getProperty( $name );
 		}

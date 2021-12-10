@@ -5,6 +5,9 @@
 	"descriptionmsg": "prop-desc",
 	"license-name": "GPL-3.0-or-later",
 	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.31.0"
+	},
 	"MessagesDirs": {
 		"Prop": [
 			"i18n"
@@ -19,5 +22,5 @@
 	"Hooks": {
 		"ParserFirstCallInit": "Prop::onParserFirstCallInit"
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
